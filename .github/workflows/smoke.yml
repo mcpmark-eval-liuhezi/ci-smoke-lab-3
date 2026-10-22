@@ -1,0 +1,14 @@
+name: Smoke Test
+
+on:
+  push
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo smoke lines
+        run: |
+          echo "CI smoke test: push received and workflow started."
+          echo "Repository: ${{ github.repository }}"
+          echo "Ref: ${{ github.ref }}"
